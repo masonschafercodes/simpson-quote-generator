@@ -4,23 +4,28 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Random Simpson's Quote Generator</title>
-    <link rel="stylesheet" href="./src/styles.css">
+    <link rel="stylesheet" href="./src/styles.css" />
+    <link
+      href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAP8BAAAAAAAAAAAFRjEvAjguYzAgU28zIVxkAE0AFwAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAAAAAAAEAAAAA/wAAATQdZoQ9FnfMJiZr9j0lgf9VIJb/RB6D/ycrZecQK0COADUAEwAAAAAAAAADAAAAAAAAAAIAAAABIkUiFhIyWsFIGnn/XB+H/1kerv9VJqL5SSeN+kUjivplI7b/SCCK/yQbUtwfLzkxAAAAAAAAAAIAAAADVVUqBhIwSr0uHoD/XSCu81Erg/pRKJH/Siyj/0gjkv9MJZ3/ZizB/Uguf/Q7GID/HCBW5hJJLRwAAD8EAAAAABo0SWwfLG3/TR2g81skuP9dJ7L/Yyyw+mcws/56Q8P/bzei+mowvf9gLbn/Vyms9EcYlv8UI0KlAAAAAAAAAAATLVHHPR+R/F8mvfpNJJr/Sy96/kU2j/8dNVj8LUpz9ElIfv9sRKT9ZDWl/mIqvP5OJqP6PhOM9B4aQTsYMT4pGjZX9lUqlf9KIKD+TyKY+ks2kP4ROke0ADAeKgAhABcBPEqMSVOL/3M+sPpWKav/Qi6O+UoffP8jFFKJAy8sUS4peP9dILb7SiOj/lQip/0lKG38ADYHIQAAAAAAAAAAPwAABCE/Yd1tOL//WCuh/lQmnfxAH4b/CSFBoQ4fI0kvKG//UiKz+1ojsv9ZHp38IiRh/RY3Ji4AAAAAAAB/AgAAAAAhKVPQSyaW+lwus/RbKLzzTRqu+g8cQakUKCgZJTRb7kopj/9WIa39WSOB+jEheP8HLjy1ACEAHxU1NRgJKS+AMzV3/jo1ff8kKUL/Lihe/z8eh/8ZH0KCAAAAACcqUrtGKoX9YCLG+Vwlvv9cHqP+OSF6/yopWPciKkvzFzRQ/xVUefkWQFXLJiIyfxojMJkSKT3BITlKHwAAAABFLm1ucD21/1cnifFhJLX/ZSm0/0oei/tjKoj/YiuR+jIlS/gfMDlqAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP8BFiEsF1o4heNzPKz/UzCi91gumflKJYr/ZSjC/l4rp/siHDn/ESInLQB/fwIVABUMAAAABgAAAAMAAAABAAAAAQAAAAAYIRgfNTBmqDI1eP9rNbz/by+u/3kwu/VQI436CRMTp38//wMAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAGKytTRS94w21DlPZWPXf/OD+D/xAzSM8/FQAMAAAAAgAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJ/AL8EAAAAAAAAAAAmH0woEzFFTQ1BQ3EhRFpdAAAABgAAAAAAAAAAAAAAAAAAAAAAAAAA//8AAPAPAADgBwAAwAMAAMABAACAAQAAgYAAAIPAAACDwAAAgYAAAIAJAADAPwAAwD8AAOA/AAD4PwAA//8AAA=="
+      rel="icon"
+      type="image/x-icon"
+    />
   </head>
   <body>
     <header>
       <h1>Simpson's Quotes</h1>
     </header>
     <main id="app">
-        <div v-if="response" class="quote-box">
-            <img v-bind:src="image_url" alt="Simpsons image for quote">
-            <h2>"{{ quote }}"</h2>
-            <cite><strong>{{ character }}</strong></cite>
-        </div>
-        <div v-else class="quote-box">
-            <h1>Click the button bellow to get a new quote!</h1>
-            <p>DOOOOOO ITTT!!!!</p>
-        </div>
-        <button v-on:click="getNewQuote">Get a Quote!</button>
+      <div v-if="response" class="quote-box">
+        <img v-bind:src="image_url" alt="Simpsons image for quote" />
+        <h2>"{{ quote }}"</h2>
+        <cite><strong>{{ character }}</strong></cite>
+      </div>
+      <div v-else class="quote-box">
+        <h1>Click the button bellow to get a new quote!</h1>
+        <p>DOOOOOO ITTT!!!!</p>
+      </div>
+      <button v-on:click="getNewQuote">Get a Quote!</button>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="./src/app.js"></script>
