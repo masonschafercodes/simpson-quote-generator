@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random Simpson's Quote Generator</title>
+    <link rel="stylesheet" href="./src/styles.css">
+  </head>
+  <body>
+    <header>
+      <h1>Simpson's Quotes</h1>
+    </header>
+    <main id="app">
+        <div v-if="response" class="quote-box">
+            <img v-bind:src="image_url" alt="Simpsons image for quote">
+            <h2>"{{ quote }}"</h2>
+            <cite><strong>{{ character }}</strong></cite>
+        </div>
+        <div v-else class="quote-box">
+            <h1>Click the button bellow to get a new quote!</h1>
+            <p>DOOOOOO ITTT!!!!</p>
+        </div>
+        <button v-on:click="getNewQuote">Get a Quote!</button>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="./src/app.js"></script>
+  </body>
+</html>
